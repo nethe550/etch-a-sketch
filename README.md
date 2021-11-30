@@ -10,9 +10,12 @@ The Etch-A-Sketch controller is re-useable and fully configurable, making it eas
 
 <hr />
 
+<img width="1280" height="500" style="border-radius:6px" src="https://github.com/nethe550/etch-a-sketch/blob/main/screenshot.png" />
+
 ### Usage Requirements
 - Required UI controls (clear button, sensitivity slider, line color, etc.). The default configuration specifies all required UI controls. 
 - Credit to the author defined in the license. (nethe550)
+
 ...and that's it!
 
 # Configuration
