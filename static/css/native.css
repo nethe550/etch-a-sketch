@@ -1,0 +1,169 @@
+:root {
+
+    /* === Scrollbars === */
+
+    /* Webkit */
+    --scrollbar-thickness: 12px; /* 1 pixel less than standard scrollbar width (17px) */
+
+    --scrollbar-track-color: var(--background-4-color);
+    --scrollbar-track-hover-color: var(--foreground-1-color);
+
+    --scrollbar-thumb-color: var(--foreground-3-color);
+    --scrollbar-thumb-hover-color: var(--foreground-4-color);
+
+    --scrollbar-corner-color: var(--background-3-color);
+
+    /* Firefox */
+
+    --moz-scrollbar-width: thin;
+
+    /* === Inputs === */
+
+    /* Range */
+    --range-input-handle-thickness: 12px;
+    --range-input-padding: 5px 10px;
+    --range-input-track-shadow: none;
+    --range-input-handle-shadow: none;
+
+    /* Color */
+    --color-input-padding: 4px;
+
+}
+
+@supports (-webkit-appearance: none) {
+
+    *::-webkit-scrollbar {
+        height: var(--scrollbar-thickness);
+    }
+    
+    *::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-track-color);
+    }
+    
+    *::-webkit-scrollbar-track:hover {
+        background-color: var(--scrollbar-track-hover-color);
+    }
+    
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-color);
+        border-radius: var(--border-radius);
+    }
+    
+    *::-webkit-scrollbar-thumb:hover {
+        background-color: var(--scrollbar-thumb-hover-color);
+    }
+    
+    *::-webkit-scrollbar-corner {
+        background-color: var(--scrollbar-corner-color);
+    }
+
+    input[type='range'] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        position: relative;
+        top: -50%;
+        width: var(--range-input-handle-thickness);
+        height: var(--range-input-handle-thickness);
+        background-color: var(--foreground-4-color);
+        border-radius: 50%;
+        box-shadow: var(--range-input-handle-shadow);
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+        display: flex;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: var(--range-input-track-shadow);
+        -webkit-box-shadow: var(--range-input-track-shadow);
+        background-color: var(--foreground-2-color);
+    }
+
+    input[type='color']::-webkit-color-swatch-wrapper {
+        padding: 0;
+        border: none;
+        border-radius: var(--border-radius);
+    }
+
+    input[type='color']::-webkit-color-swatch {
+        border: none;
+        border-radius: var(--border-radius);
+    }
+
+}
+
+/* Firefox */
+
+@supports (-moz-appearance: none) {
+
+    * {
+        scrollbar-width: var(--moz-scrollbar-width);
+        scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+    }
+
+    input[type='range'] {
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    input[type='range']::-moz-range-track {
+        display: flex;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: var(--range-input-track-shadow);
+        -moz-box-shadow: var(--range-input-track-shadow);
+        background-color: var(--foreground-2-color);
+    }
+
+    input[type='range']::-moz-slider-thumb {
+        border: none;
+        position: relative;
+        width: var(--range-input-handle-thickness);
+        height: var(--range-input-handle-thickness);
+        top: -50%;
+        background-color: var(--foreground-4-color);
+        border-radius: var(--range-input-handle-thickness);
+        box-shadow: var(--range-input-handle-shadow);
+        -moz-box-shadow: var(--range-input-handle-shadow);
+    }
+
+    input[type='range']::-moz-range-progress {
+        background-color: var(--accent-1-color);
+    }
+
+    input[type='color']::-moz-color-swatch-wrapper {
+        padding: 0;
+        border: none;
+        border-radius: var(--border-radius);
+    }
+
+    input[type='color']::-moz-color-swatch {
+        border: none;
+        border-radius: var(--border-radius);
+    }
+
+    #color {
+        min-height: 32px;
+    }
+
+}
+
+input[type='range'] {
+    padding: var(--range-input-padding);
+    background-color: var(--foreground-1-color);
+    border-radius: var(--border-radius);
+}
+
+input[type='range']:focus {
+    outline: none;
+}
+
+input[type='color'] {
+    padding: var(--color-input-padding);
+    background-color: var(--foreground-1-color);
+    border: none;
+    border-radius: var(--border-radius);
+}

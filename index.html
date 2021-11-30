@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <title>Etch-A-Sketch</title>
+        <link rel="stylesheet" href="./static/css/index.css" />
+        <link rel="stylesheet" href="./static/css/native.css" />
+    </head>
+    <body>
+        <header id="page-header">
+            <span id="page-header-title">Etch-A-Sketch</span>
+            <div id="page-header-links">
+                <a href="https://github.com/nethe550/etch-a-sketch">
+                    <img src="./static/img/github.png" width="24" height="24" alt="Github" />
+                </a>
+                <a href="https://discord.com/users/560972129106133032">
+                    <img src="./static/img/discord.png" width="24" height="24" alt="Discord" />
+                </a>
+                <a href="https://the-index.info/">
+                    <img src="./static/img/home.png" width="24" height="24" alt="Home" />
+                </a>
+            </div>
+        </header>
+
+        <h1>Etch-A-Sketch</h1>
+        <p>An implementation of the popular toy using the HTML Canvas API and vanilla Javascript.</p>
+        <hr />
+        <div id="content">
+            <div id="display-wrapper">
+                <canvas id="sketch" width="688" height="381"></canvas>
+            </div>
+            <div id="controls">
+                <button class="control-button" id="clear">Clear</button>
+                <div class="subcontrol-panel" id="sensitivity-control">
+                    <label>Sensitivity</label>
+                    <input id="sensitivity" type="range" min="1" max="10" value="5" />
+                    <label id="sensitivity-value">5</label>
+                </div>
+                <div class="subcontrol-panel" id="line-control">
+                    <label>Line</label>
+                    <input id="color" type="color" value="#ffffff" />
+                    <input id="size" type="range" min="1" max="5" value="1" />
+                    <label id="size-value">1px</label>
+                </div>
+                <div class="subcontrol-panel" id="dpad">
+                    <div class="filler"></div>
+                    <button class="dpad-button" id="up">^</button>
+                    <div class="filler"></div>
+                    <button class="dpad-button" id="left"><</button>
+                    <button class="dpad-button" id="down">v</button>
+                    <button class="dpad-button" id="right">></button>
+                </div>
+            </div>
+        </div>
+
+        <footer id="page-footer">
+            <span id="page-footer-title">theIndex Co. &copy; 2021-2022</span>
+        </footer>
+
+        <script src="./static/js/EtchASketch.js"></script>
+        <script>
+            const sketch = new EtchASketch('#sketch', '#display-wrapper');
+        </script>
+    </body>
+</html>
