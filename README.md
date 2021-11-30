@@ -1,7 +1,7 @@
 # Etch-A-Sketch
 An implementation of the popular toy using the HTML Canvas API and vanilla Javascript.
 
-For an improved README, see [this](https://github.com/nethe550/etch-a-sketch/README.html) version.
+For an improved README, see [this](https://github.com/nethe550/etch-a-sketch/blob/main/README.html) version.
 
 <img align="left" width="191" height="158" style="border-radius:6px;" src="https://i.pinimg.com/originals/44/d7/ac/44d7ac222f3033492705a09e0bac7193.png" />
 
